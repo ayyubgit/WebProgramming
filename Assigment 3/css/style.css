@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+html, body {
+    height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 874px;
+    min-height: 100%;
+    box-sizing: border-box;
+    border: 25px solid #bdc3c7;
+    padding: 50px 25px;
+}
+
+.news-date {
+    color: #3498e2;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.news-header {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.news-container-header {
+    border-left: 5px solid #bdc3c7;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.news-container-text {
+    margin-bottom: 20px;
+}

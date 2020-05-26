@@ -1,0 +1,31 @@
+html, body {
+    height: 100%;
+}
+
+.app {
+    width: 320px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    color: rgba(210, 0, 2, 0.88);
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.container {
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+.container td {
+    border: 5px solid rgba(196, 0, 2, 0.8);
+    padding: 55px;
+    border-collapse: collapse;
+}

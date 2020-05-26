@@ -1,0 +1,40 @@
+.app {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    background-color: #333333;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.photo {
+    background-size: cover;
+    height: 50%;
+    background: linear-gradient(to right, rgba(252, 222, 190, 0.5) 50%, rgba(37, 137, 189, 0.5) 100%), url("../img/bg.jpg") center;
+    clip-path: polygon(50% 100%, 0% 75%, 0% 0%, 100% 0%, 100% 75%);
+}
+
+.content {
+    text-align: center;
+}
+
+.content-header {
+    font-size: 170px;
+    text-transform: uppercase;
+    margin: 70px 0;
+    background: -webkit-linear-gradient(130deg, rgba(252,222,190,1) 0%, rgba(252,222,190,1) 50%, rgba(37,137,189,1) 50%, rgba(37,137,189,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.content-text {
+    font-size: 32px;
+    color: #2589BD;
+}
+
+.pink-text {
+    color: #FCDEBE;
+}
