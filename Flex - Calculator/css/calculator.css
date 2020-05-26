@@ -1,0 +1,102 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --light-grey: #d8d9db;
+    --buttons-on-hover: #ebebeb;
+    --button-active-state: #bbbcbe;
+    --function-buttons: #df974c;
+    --function-buttons-on-hover: #dfb07e;
+    --function-button-active-state: #dd8d37;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin-top: 10%;
+    margin-left: 40%;
+    background-color: #ccc;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+    display: flex;
+    width: 300px;
+    font-family: monospace;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: black;
+}
+
+.screen {
+    color: white;
+    text-align: right;
+    font-size: 32pt;
+}
+
+.grey {
+    background-color: var(--light-grey);
+    color: var(--black);
+}
+
+
+
+.btn {
+    width: 24.5%;
+}
+
+.btn:hover {
+    background-color: var(--buttons-on-hover);
+}
+
+.btn-func {
+    background-color: var(--function-buttons);
+    color: var(--white);
+:hov
+}
+
+.btn-func:hover {
+    background-color: var(--function-buttons-on-hover);
+}
+.two-btn {
+    width: 49.5%;
+}
+
+.two-btn:hover {
+    background-color: var(--buttons-on-hover);
+}
+.three-btn {
+    width: 75%;
+}
+
+.three-btn:hover {
+    background-color: var(--buttons-on-hover);
+}
+.full-btn {
+    width: 100%;
+}
+.full-btn:hover {
+    background-color: var(--buttons-on-hover);
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content:stretch;
+    height: 16.7%;
+    margin-bottom: .5%;
+}
+
+.row button {
+    font-size: 25px;
+    height: 60px;
+}

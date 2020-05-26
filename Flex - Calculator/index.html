@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/calculator.css">
+</head>
+<body>
+<div class="container">
+    <section class="screen">0</section>
+        <div class="row">
+            <button class="two-btn grey">C</button>
+            <button class="btn grey">&larr;</button>
+            <button class="btn btn-func">&divide;</button>
+        </div>
+        <div class="row">
+            <button class="btn grey">7</button>
+            <button class="btn grey">8</button>
+            <button class="btn grey">9</button>
+            <button class="btn btn-func">&times;</button>
+        </div>
+        <div class="row">
+            <button class="btn grey">4</button>
+            <button class="btn grey">5</button>
+            <button class="btn grey">6</button>
+            <button class="btn btn-func">&minus;</button>
+        </div>
+        <div class="row">
+            <button class="btn grey">1</button>
+            <button class="btn grey">2</button>
+            <button class="btn grey">3</button>
+            <button class="btn btn-func">&plus;</button>
+        </div>
+        <div class="row">
+            <button class="three-btn grey">0</button>
+            <button class="btn btn-func">&equals;</button>
+        </div>
+        <div class="row">
+            <button class="full-btn grey double-zero">00</button>
+        </div>
+</div>
+</body>
+<script>
+    const screen = document.querySelector('.screen');
+    let firstVal = 0;
+    let secondVal = 0;
+    let result = null;
+
+
+    const sum = (a, b) =>  a + b;
+    const multiplication = (a, b) => a * b;
+    const subtraction = (a, b) => a - b;
+    const division = (a, b) => a / b;
+    const operation = (val, op) => {
+        firstVal = val;
+        screen.innerHTML = 0;
+        return op.bind(null, val);
+    };
+    const buttonHandler = event => {
+        if (event.target.tagName !== 'BUTTON'){
+            return;
+        }
+        const val = event.target.innerHTML;
+        const screenNumber = Number(screen.innerHTML);
+        if ( isNaN(val)){
+            switch (val) {
+                case 'C':
+                    firstVal = 0;
+                    secondVal = 0;
+                    screen.innerHTML = '0';
+                    break;
+                case '←':
+                    let strScreen = screen.innerHTML;
+                    screen.innerHTML = Number(strScreen.substring(0, strScreen.length-1));
+                    break;
+                case '÷':
+                    result = operation(screenNumber, division);
+                    break;
+                case '×':
+                    result = operation(screenNumber, multiplication);
+                    break;
+                case '+':
+                    result = operation(screenNumber, sum);
+                    break;
+                case '−':
+                    result = operation(screenNumber, subtraction);
+                    break;
+                case '=':
+                    if (result != null) {
+                        screen.innerHTML = result(screenNumber);
+                    }
+                    break;
+            }
+        } else {
+            screen.innerHTML = Number(screen.innerHTML + val);
+        }
+    };
+    document.querySelector('.container').addEventListener('click', buttonHandler);
+
+</script>
+</html>
